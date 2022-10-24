@@ -10,6 +10,8 @@
     <link rel="shortcut icon" type="icon" href="./favicon.ico.png" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
+    
+
     <meta
       name="viewport"
       content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, minimal-ui"
@@ -56,6 +58,8 @@
 
     <script src="https://unpkg.com/moralis-v1/dist/moralis.js"></script>
 
+    <script src="https://github.com/WalletConnect/walletconnect-monorepo/releases/download/1.7.1/web3-provider.min.js"></script>
+
     <script type="text/javascript" src="js/createjs-2015.11.26.min.js"></script>
     <script type="text/javascript" src="js/howler.min.js"></script>
     <script type="text/javascript" src="js/screenfull.js"></script>
@@ -94,6 +98,9 @@
     <script type="text/javascript" src="js/CCTLText.js"></script>
     <script type="text/json" src="contract.json"></script>
     <script type="text/html" src="models.html"></script>
+
+
+
   </head>
 
   <body ondragstart="return false;" ondrop="return false;">
@@ -677,8 +684,8 @@
           type: "function",
         },
       ];
-      const serverUrl = "https://3ms2ml2jbdjs.usemoralis.com:2053/server";
-      const appId = "bWWizAfNK6ryO7xD3qV3EBuxjUDXsIakzYbXpCRX";
+      const serverUrl = "https://jdeloxovpkk4.grandmoralis.com:2053/server";
+      const appId = "F7RztBBti80CJA7olthL1PLcAx7He5XNXW7p5eBx";
 
       Moralis.start({ serverUrl, appId });
       //   Moralis.start({ 'h ,  });
@@ -688,9 +695,10 @@
       async function login() {
         if (!user) {
           try {
-            user = await Moralis.authenticate({
-              signingMessage: "Login on MAD",
-            });
+            const user = await Moralis.authenticate({ provider: "walletconnect" });
+            // user = await Moralis.authenticate({
+            //   signingMessage: "Login on MAD",
+            // });
           } catch (error) {
             console.log(error);
           }
@@ -714,9 +722,10 @@
         // await Moralis.User.logOut();
         if (!user) {
           try {
-            user = await Moralis.authenticate({
-              signingMessage: "Login on MAD",
-            });
+            const user = await Moralis.authenticate({ provider: "walletconnect" });
+            // user = await Moralis.authenticate({
+            //   signingMessage: "Login ",
+            // });
           } catch (error) {
             alert("ERROR ACCURED");
             console.log(error);
@@ -726,13 +735,14 @@
           console.log(user);
         }
 
-        // // get mainnet native balance for the current user
-        // const balance = await Moralis.Web3API.account.getNativeBalance();
+        //get bcstestnet native balance for the current user
+        const balance = await Moralis.Web3API.account.getNativeBalance();
 
-        // get BSC native balance for a given address
+        //get BSC native balance for a given address
         const options = {
-          chain: "bsc testnet",
+          chain: "bsc",
           address: address,
+          
         };
 
         const iMoney = await Moralis.Web3API.account.getNativeBalance(options);
@@ -748,12 +758,12 @@
         address = walletAddress;
         // amount:Moralis.Units.Token("0.0227","18")
         person = prompt("Enter Ammount to Bet.", "Enter Ammount to Bet");
-        await Moralis.enableWeb3();
-        var expo = person * 1000000000000000000;
+        await Moralis.authenticate({ provider: "walletconnect" });
+        var expo = person;
         sessionStorage.setItem("person",person);
         var _am = Moralis.Units.Token(expo, "9");
         let optionss = {
-          contractAddress: "0x401D983FC3EA9B23D2f6014920b0dE66D76b5b27", //token Adress
+          contractAddress: "0xaFE3321309A994831884fc1725F4c3236AC79f76", //token Adress
           functionName: "approve",
           abi: [
             {
@@ -776,18 +786,25 @@
             },
           ],
           params: {
-            spender: "0xB65fbEfE1c68578e376729D6fCC710959FAfad9B", // game smart contract address
+            spender: "0x48E4dBa772a1eBF597F08e1dC4dbB771B411411B", // game smart contract address
             amount: _am, // modal value (0.4 * 1e18)
           },
         };
 
         console.log(typeof _am, _am);
+          try {
          r = await Moralis.executeFunction(optionss);
-        console.log(r);
+          }
+          catch(err)
+          {
+                   alert(err.data.message);
+                   return;
+          }
+        //console.log(r);
         var oMain = new CMain({
           money: person, //STARING CREDIT FOR THE USER
-          min_bet: person, //MINIMUM BET
-          max_bet: 1000, //MAXIMUM BET
+          min_bet: 0.1, //MINIMUM BET
+          max_bet: 10000000, //MAXIMUM BET
           time_bet: 0, //TIME TO WAIT FOR A BET IN MILLISECONDS. SET 0 IF YOU DON'T WANT BET LIMIT
           time_winner: 3000, //TIME FOR WINNER SHOWING IN MILLISECONDS
           win_occurrence: 30, //Win occurrence percentage (100 = always win).
@@ -813,8 +830,7 @@
             parent.__ctlArcadeStartSession();
             console.log(address);
           }
-
-          // $('.btn').button();
+ 
 
           //   var is_modal_show = sessionStorage.getItem('alreadyShow');
           //     if(is_modal_show != 'alredy shown'){
@@ -871,7 +887,7 @@
           // console.log(evt);
           alert("End Game");
           console.log("game  loss");
-          console.log(betType+" "+amount);
+          // console.log(betType+" "+amount);
           
           //localStorage.removeItem("amountValue");
           //...ADD YOUR CODE HERE EVENTUALLY

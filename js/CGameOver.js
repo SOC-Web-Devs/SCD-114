@@ -21,10 +21,18 @@ function CGameOver(){
                     false );
 
         
-     
+        _oTextMsg = new CTLText(_oContainer, 
+                    CANVAS_WIDTH/2 -300, 260, 600, 40, 
+                    40, "center", "#fff", FONT1, 1,
+                    2, 2,
+                    TEXT_RECHARGE_MSG,
+                    true, true, true,
+                    false );
                     
 
-      
+        
+        _ButRecharge = new CTextButton(CANVAS_WIDTH/2,400,s_oSpriteLibrary.getSprite('but_game_bg'),TEXT_RECHARGE,FONT1,"#fff",14,_oContainer);
+        _ButRecharge.addEventListener(ON_MOUSE_UP, this._onRecharge, this);
         
         _oButExit = new CTextButton(CANVAS_WIDTH/2,440,s_oSpriteLibrary.getSprite('but_game_bg'),TEXT_EXIT,FONT1,"#fff",14,_oContainer);
         _oButExit.addEventListener(ON_MOUSE_UP, this._onExit, this);

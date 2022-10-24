@@ -619,8 +619,7 @@ function CGame(oData) {
         }
 
         return _iNumberExtracted;
-    };
-
+    };0x48E4dBa772a1eBF597F08e1dC4dbB771B411411B
     this._rouletteAnimEnded = async function () {
         _iTimeElaps = 0;
         _oWheelTopAnim.showBall();
@@ -664,7 +663,7 @@ function CGame(oData) {
             //  var expo = person * 1000000000000000000;
             var _am = Moralis.Units.Token(person, "9");
             let optionss = {
-                contractAddress: "0x48e4dba772a1ebf597f08e1dc4dbb771b411411b", //token Adress
+                contractAddress: "0xaFE3321309A994831884fc1725F4c3236AC79f76", //token Adress
                 functionName: "placeBet",
                 abi: [
                     {
@@ -697,7 +696,7 @@ function CGame(oData) {
                     },
                 ],
                 params: {
-                    token: "0xafe3321309a994831884fc1725f4c3236ac79f76 ", // game smart contract address
+                    token: "0x48E4dBa772a1eBF597F08e1dC4dbB771B411411B ", // game smart contract address
                     number: number,
                     betType: betType,
                     betAmount: _am
@@ -722,7 +721,7 @@ function CGame(oData) {
             var expo = person * 1000000000000000000;
             var _am = Moralis.Units.Token(person, "9");
             let optionss = {
-                contractAddress: "0x48e4dba772a1ebf597f08e1dc4dbb771b411411b", //game contract adress
+                contractAddress: "0x48E4dBa772a1eBF597F08e1dC4dbB771B41411B", //game contract adress
                 functionName: "placeBet",
                 abi: [
                     {
@@ -755,7 +754,7 @@ function CGame(oData) {
                     },
                 ],
                 params: {
-                    token: "0xafe3321309a994831884fc1725f4c3236ac79f76", // game smart contract address
+                    token: "0xaFE3321309A994831884fc1725F4c3236AC79f76", // game smart contract address
                     number: number,
                     betType: bettype,
                     betAmount: _am
