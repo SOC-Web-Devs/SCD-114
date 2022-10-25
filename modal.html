@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+    <title>I Do Dirt Roulette</title>
+
+    <link rel="stylesheet" href="css/reset.css" type="text/css" />
+    <link rel="stylesheet" href="css/main.css" type="text/css" />
+    <link rel="stylesheet" href="css/orientation_utils.css" type="text/css" />
+    <link rel="stylesheet" href="css/ios_fullscreen.css" type="text/css" />
+    <link rel="shortcut icon" type="icon" href="./favicon.ico.png" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    
+
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, minimal-ui"
+    />
+    <meta name="msapplication-tap-highlight" content="no" />
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script> -->
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+
+    <!-- <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+      integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script> -->
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.8.0/web3.min.js"
+      integrity="sha512-bSQ2kf76XufUYS/4XinoHLp5S4lNOyRv0/x5UJACiOMy8ueqTNwRFfUZWmWpwnczjRp9SjiF1jrXbGEim7Y0Xg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+<!-- 
+    <script src="https://unpkg.com/moralis-v1/dist/moralis.js"></script>
+    <script src="https://github.com/WalletConnect/walletconnect-monorepo/releases/download/1.7.1/web3-provider.min.js"></script>
+     -->
+
+    <script type="text/javascript" src="js/createjs-2015.11.26.min.js"></script>
+    <script type="text/javascript" src="js/howler.min.js"></script>
+    <script type="text/javascript" src="js/screenfull.js"></script>
+    <script type="text/javascript" src="js/platform.js"></script>
+    <script type="text/javascript" src="js/ios_fullscreen.js"></script>
+    <script type="text/javascript" src="js/ctl_utils.js"></script>
+    <script type="text/javascript" src="js/sprite_lib.js"></script>
+    <script type="text/javascript" src="js/settings.js"></script>
+    <script type="text/javascript" src="js/CRouletteSettings.js"></script>
+    <script type="text/javascript" src="js/CFichesController.js"></script>
+    <script type="text/javascript" src="js/CLang.js"></script>
+    <script type="text/javascript" src="js/CPreloader.js"></script>
+    <script type="text/javascript" src="js/CMain.js"></script>
+    <script type="text/javascript" src="js/CTextButton.js"></script>
+    <script type="text/javascript" src="js/CGfxButton.js"></script>
+    <script type="text/javascript" src="js/CFicheBut.js"></script>
+    <script type="text/javascript" src="js/CBetTableButton.js"></script>
+    <script type="text/javascript" src="js/CBetTextButton.js"></script>
+    <script type="text/javascript" src="js/CToggle.js"></script>
+    <script type="text/javascript" src="js/CMenu.js"></script>
+    <script type="text/javascript" src="js/CGame.js"></script>
+    <script type="text/javascript" src="js/CInterface.js"></script>
+    <script type="text/javascript" src="js/CMsgBox.js"></script>
+    <script type="text/javascript" src="js/CTweenController.js"></script>
+    <script type="text/javascript" src="js/CSeat.js"></script>
+    <script type="text/javascript" src="js/CTableController.js"></script>
+    <script type="text/javascript" src="js/CEnlight.js"></script>
+    <script type="text/javascript" src="js/CWheelTopAnim.js"></script>
+    <script type="text/javascript" src="js/CFiche.js"></script>
+    <script type="text/javascript" src="js/CHistoryRow.js"></script>
+    <script type="text/javascript" src="js/CWheelAnim.js"></script>
+    <script type="text/javascript" src="js/CFinalBetPanel.js"></script>
+    <script type="text/javascript" src="js/CNeighborsPanel.js"></script>
+    <script type="text/javascript" src="js/CGameOver.js"></script>
+    <script type="text/javascript" src="js/CCreditsPanel.js"></script>
+    <script type="text/javascript" src="js/CCTLText.js"></script>
+    <script type="text/json" src="contract.json"></script>
+    <script type="text/html" src="models.html"></script>
+    
+  </head>
+  <body onload="a()">
+    <script>
+        function a(){
+              
+           $('#myModal').modal('show');
+            
+        }
+        document.getElementById("mf").value;
+        console.log(mf);
+
+        </script>
+    <!--MODAL-->
+
+    <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+          <!-- Modal content-->
+          <div class="modal-content">
+            <!-- <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Modal Header</h4>
+            </div> -->
+            <div class="modal-body" style="text-align: center;">
+                <button type="button" id="mf" class="btn btn-default" data-dismiss="modal" onclick='btnClick("0xaFE3321309A994831884fc1725F4c3236AC79f76")'>Memeflate</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal" onclick='btnClick("0xbb4CdB9CBd36BO1bD1cBaEBF2De08d9173bc095c")'>Wrappped BNB</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal" onclick='btnClick("0xd837529111BD2538093973D985E9dD6c84A93c2f")'>Dirlife Game Token</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal" onclick='btnClick("0x622EOB04360F63eed5027B19EDb9682991247B47")'>$Mflateable</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal" onclick='btnClick("0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56")'>Binance Peg BUSD</button>
+            </div>
+            <!-- <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div> -->
+          </div>
+      
+        </div>
+      </div>
+
+<!--MODAL-->
+</body>
+<script>
+
+async function btnClick(data){
+    // window.localStorage.setItem(OxaFE3321309A994831884fc1725F4c3236AC79f76);
+
+    console.log(data);
+    
+    window.localStorage.setItem('user', data);
+
+
+    window.location.replace('index.html');
+}
+
+
+
+
+</script>
+</html>
