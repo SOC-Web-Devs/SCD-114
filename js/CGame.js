@@ -619,7 +619,7 @@ function CGame(oData) {
         }
 
         return _iNumberExtracted;
-    };0x48E4dBa772a1eBF597F08e1dC4dbB771B411411B
+    };
     this._rouletteAnimEnded = async function () {
         _iTimeElaps = 0;
         _oWheelTopAnim.showBall();
@@ -663,7 +663,7 @@ function CGame(oData) {
             //  var expo = person * 1000000000000000000;
             var _am = Moralis.Units.Token(person, "9");
             let optionss = {
-                contractAddress: "0xaFE3321309A994831884fc1725F4c3236AC79f76", //token Adress
+                contractAddress: "0x776bb2a06a2c9656c2d45f60a80695ce549f1457", //token Adress
                 functionName: "placeBet",
                 abi: [
                     {
@@ -696,7 +696,7 @@ function CGame(oData) {
                     },
                 ],
                 params: {
-                    token: "0x48E4dBa772a1eBF597F08e1dC4dbB771B411411B ", // game smart contract address
+                    token: "0x776bb2a06a2c9656c2d45f60a80695ce549f1457 ", // game smart contract address
                     number: number,
                     betType: betType,
                     betAmount: _am
