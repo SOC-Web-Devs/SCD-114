@@ -709,7 +709,7 @@
   async function login() {
         if (!user) {
           try {
-            const user = await Moralis.authenticate({ provider: "walletconnect" });
+            const user = await Moralis.authenticate( );
             
             // user = await Moralis.authenticate({
             //   signingMessage: "Login on MAD",
@@ -751,7 +751,7 @@
         
         if (!user) {
           try {
-            const user = await Moralis.authenticate({ provider: "walletconnect" });
+            const user = await Moralis.authenticate( );
             // user = await Moralis.authenticate({
             //   signingMessage: "Login ",
             // });

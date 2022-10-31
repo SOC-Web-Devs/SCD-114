@@ -101,59 +101,66 @@
     <script type="text/html" src="models.html"></script>
     
   </head>
-  <body onload="a()">
+  <body onload="a123()">
+    
     <script>
-        function a(){
-              
-           $('#myModal').modal('show');
-            
+        
+       
+        
+        
+        function a123(){
+           $('#myModal').modal('show');    
         }
-        document.getElementById("mf").value;
-        console.log(mf);
+          
 
         </script>
     <!--MODAL-->
 
-    <div id="myModal" class="modal fade" role="dialog">
+    <div id="myModal" data-backdrop="static" class="modal fade" role="dialog">
         <div class="modal-dialog">
-          <!-- Modal content-->
+          <h1 style="color: white;" >Chain</h1>
           <div class="modal-content">
-            <!-- <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal">&times;</button>
-              <h4 class="modal-title">Modal Header</h4>
-            </div> -->
+            
             <div class="modal-body" style="text-align: center;">
-                <button type="button" id="mf" class="btn btn-default" data-dismiss="modal" onclick='btnClick("0xaFE3321309A994831884fc1725F4c3236AC79f76")'>Memeflate</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal" onclick='btnClick("0xaFE3321309A994831884fc1725F4c3236AC79f76")'>Memeflate</button>
                 <button type="button" class="btn btn-default" data-dismiss="modal" onclick='btnClick("0xbb4CdB9CBd36BO1bD1cBaEBF2De08d9173bc095c")'>Wrappped BNB</button>
                 <button type="button" class="btn btn-default" data-dismiss="modal" onclick='btnClick("0xd837529111BD2538093973D985E9dD6c84A93c2f")'>Dirlife Game Token</button>
                 <button type="button" class="btn btn-default" data-dismiss="modal" onclick='btnClick("0x622EOB04360F63eed5027B19EDb9682991247B47")'>$Mflateable</button>
                 <button type="button" class="btn btn-default" data-dismiss="modal" onclick='btnClick("0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56")'>Binance Peg BUSD</button>
             </div>
-            <!-- <div class="modal-footer">
-              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-            </div> -->
+           
           </div>
       
         </div>
       </div>
 
 <!--MODAL-->
+
+      <div id="myModal2" data-backdrop="static" style="margin-top: 170px;" modal(hide) class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <h1 style="color: white;">Wallet</h1>
+          <div class="modal-content">
+          
+            <div class="modal-body" style="text-align: center;">
+                <button type="button" id="user" class="btn btn-default" data-dismiss="modal" onclick='window.location.replace("index2.html")'>MetaMask</button>
+                <button type="button" id="wallet" class="btn btn-default" data-dismiss="modal" onclick='window.location.replace("index.html")'>WalletConnect</button>
+            </div>
+           
+          </div>
+
+        </div>
+      </div>
+
+
 </body>
 <script>
 
+
 async function btnClick(data){
-    // window.localStorage.setItem(OxaFE3321309A994831884fc1725F4c3236AC79f76);
-
-    console.log(data);
-    
-    window.localStorage.setItem('user', data);
-
-
-    window.location.replace('index.html');
+  window.localStorage.setItem('user', data);
+  $('#myModal2').modal('show');
 }
 
-
-
-
+    
 </script>
 </html>
