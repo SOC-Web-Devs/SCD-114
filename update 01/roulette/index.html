@@ -1,0 +1,1031 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>I Do Dirt Roulette</title>
+
+    <link rel="stylesheet" href="css/reset.css" type="text/css" />
+    <link rel="stylesheet" href="css/main.css" type="text/css" />
+    <link rel="stylesheet" href="css/orientation_utils.css" type="text/css" />
+    <link rel="stylesheet" href="css/ios_fullscreen.css" type="text/css" />
+    <link rel="shortcut icon" type="icon" href="./favicon.ico.png" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    
+
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, minimal-ui"
+    />
+    <meta name="msapplication-tap-highlight" content="no" />
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script> -->
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+
+    <!-- <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+      integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script> -->
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.8.0/web3.min.js"
+      integrity="sha512-bSQ2kf76XufUYS/4XinoHLp5S4lNOyRv0/x5UJACiOMy8ueqTNwRFfUZWmWpwnczjRp9SjiF1jrXbGEim7Y0Xg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="https://unpkg.com/moralis-v1/dist/moralis.js"></script>
+
+    <script src="https://github.com/WalletConnect/walletconnect-monorepo/releases/download/1.7.1/web3-provider.min.js"></script>
+
+    <script type="text/javascript" src="js/createjs-2015.11.26.min.js"></script>
+    <script type="text/javascript" src="js/howler.min.js"></script>
+    <script type="text/javascript" src="js/screenfull.js"></script>
+    <script type="text/javascript" src="js/platform.js"></script>
+    <script type="text/javascript" src="js/ios_fullscreen.js"></script>
+    <script type="text/javascript" src="js/ctl_utils.js"></script>
+    <script type="text/javascript" src="js/sprite_lib.js"></script>
+    <script type="text/javascript" src="js/settings.js"></script>
+    <script type="text/javascript" src="js/CRouletteSettings.js"></script>
+    <script type="text/javascript" src="js/CFichesController.js"></script>
+    <script type="text/javascript" src="js/CLang.js"></script>
+    <script type="text/javascript" src="js/CPreloader.js"></script>
+    <script type="text/javascript" src="js/CMain.js"></script>
+    <script type="text/javascript" src="js/CTextButton.js"></script>
+    <script type="text/javascript" src="js/CGfxButton.js"></script>
+    <script type="text/javascript" src="js/CFicheBut.js"></script>
+    <script type="text/javascript" src="js/CBetTableButton.js"></script>
+    <script type="text/javascript" src="js/CBetTextButton.js"></script>
+    <script type="text/javascript" src="js/CToggle.js"></script>
+    <script type="text/javascript" src="js/CMenu.js"></script>
+    <script type="text/javascript" src="js/CGame.js"></script>
+    <script type="text/javascript" src="js/CInterface.js"></script>
+    <script type="text/javascript" src="js/CMsgBox.js"></script>
+    <script type="text/javascript" src="js/CTweenController.js"></script>
+    <script type="text/javascript" src="js/CSeat.js"></script>
+    <script type="text/javascript" src="js/CTableController.js"></script>
+    <script type="text/javascript" src="js/CEnlight.js"></script>
+    <script type="text/javascript" src="js/CWheelTopAnim.js"></script>
+    <script type="text/javascript" src="js/CFiche.js"></script>
+    <script type="text/javascript" src="js/CHistoryRow.js"></script>
+    <script type="text/javascript" src="js/CWheelAnim.js"></script>
+    <script type="text/javascript" src="js/CFinalBetPanel.js"></script>
+    <script type="text/javascript" src="js/CNeighborsPanel.js"></script>
+    <script type="text/javascript" src="js/CGameOver.js"></script>
+    <script type="text/javascript" src="js/CCreditsPanel.js"></script>
+    <script type="text/javascript" src="js/CCTLText.js"></script>
+    <script type="text/json" src="contract.json"></script>
+    <script type="text/html" src="models.html"></script>
+    
+
+
+
+  </head>
+
+  <body ondragstart="return false;" ondrop="return false;">
+    <div
+      style="
+        position: fixed;
+        background-color: transparent;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+      "
+    ></div>
+   
+   
+
+
+
+
+    <script>
+      window.localStorage.getItem('user');
+      window.localStorage.getItem('dml');
+      window.localStorage.getItem('bls');
+      window.localStorage.getItem('wallet');
+      
+      var dta = window.localStorage.getItem('user');
+      var dml = window.localStorage.getItem('dml');
+      var bls = window.localStorage.getItem('bls');
+      var wallet = window.localStorage.getItem('wallet');
+
+      
+
+      var person;
+      let walletAddress;
+      var address;
+      var ABI = [
+        {
+          inputs: [
+            {
+              internalType: "uint64",
+              name: "subscriptionId",
+              type: "uint64",
+            },
+            {
+              internalType: "address",
+              name: "_nft",
+              type: "address",
+            },
+          ],
+          stateMutability: "nonpayable",
+          type: "constructor",
+        },
+        {
+          inputs: [
+            {
+              internalType: "address",
+              name: "have",
+              type: "address",
+            },
+            {
+              internalType: "address",
+              name: "want",
+              type: "address",
+            },
+          ],
+          name: "OnlyCoordinatorCanFulfill",
+          type: "error",
+        },
+        {
+          anonymous: false,
+          inputs: [
+            {
+              indexed: true,
+              internalType: "address",
+              name: "user",
+              type: "address",
+            },
+            {
+              indexed: false,
+              internalType: "uint256",
+              name: "betAmount",
+              type: "uint256",
+            },
+            {
+              indexed: false,
+              internalType: "uint8",
+              name: "number",
+              type: "uint8",
+            },
+            {
+              indexed: false,
+              internalType: "uint8",
+              name: "betType",
+              type: "uint8",
+            },
+            {
+              indexed: false,
+              internalType: "address",
+              name: "token",
+              type: "address",
+            },
+          ],
+          name: "BetPlaced",
+          type: "event",
+        },
+        {
+          anonymous: false,
+          inputs: [
+            {
+              indexed: true,
+              internalType: "address",
+              name: "previousOwner",
+              type: "address",
+            },
+            {
+              indexed: true,
+              internalType: "address",
+              name: "newOwner",
+              type: "address",
+            },
+          ],
+          name: "OwnershipTransferred",
+          type: "event",
+        },
+        {
+          anonymous: false,
+          inputs: [
+            {
+              indexed: true,
+              internalType: "address",
+              name: "user",
+              type: "address",
+            },
+            {
+              indexed: false,
+              internalType: "bool",
+              name: "win",
+              type: "bool",
+            },
+            {
+              indexed: false,
+              internalType: "uint256",
+              name: "randomNum",
+              type: "uint256",
+            },
+            {
+              indexed: false,
+              internalType: "uint256",
+              name: "betAmount",
+              type: "uint256",
+            },
+            {
+              indexed: false,
+              internalType: "uint256",
+              name: "winAmount",
+              type: "uint256",
+            },
+            {
+              indexed: false,
+              internalType: "uint8",
+              name: "number",
+              type: "uint8",
+            },
+            {
+              indexed: false,
+              internalType: "uint8",
+              name: "betType",
+              type: "uint8",
+            },
+          ],
+          name: "WheelSpinned",
+          type: "event",
+        },
+        {
+          inputs: [
+            {
+              internalType: "uint256",
+              name: "",
+              type: "uint256",
+            },
+          ],
+          name: "allBets",
+          outputs: [
+            {
+              internalType: "uint256",
+              name: "requestId",
+              type: "uint256",
+            },
+            {
+              internalType: "address",
+              name: "player",
+              type: "address",
+            },
+            {
+              internalType: "address",
+              name: "token",
+              type: "address",
+            },
+            {
+              internalType: "uint8",
+              name: "betType",
+              type: "uint8",
+            },
+            {
+              internalType: "uint8",
+              name: "number",
+              type: "uint8",
+            },
+            {
+              internalType: "uint128",
+              name: "betAmount",
+              type: "uint128",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "uint256",
+              name: "from",
+              type: "uint256",
+            },
+            {
+              internalType: "uint256",
+              name: "to",
+              type: "uint256",
+            },
+          ],
+          name: "getAllBets",
+          outputs: [
+            {
+              components: [
+                {
+                  internalType: "uint256",
+                  name: "requestId",
+                  type: "uint256",
+                },
+                {
+                  internalType: "address",
+                  name: "player",
+                  type: "address",
+                },
+                {
+                  internalType: "address",
+                  name: "token",
+                  type: "address",
+                },
+                {
+                  internalType: "uint8",
+                  name: "betType",
+                  type: "uint8",
+                },
+                {
+                  internalType: "uint8",
+                  name: "number",
+                  type: "uint8",
+                },
+                {
+                  internalType: "uint128",
+                  name: "betAmount",
+                  type: "uint128",
+                },
+              ],
+              internalType: "struct Roulette.Bet[]",
+              name: "bets",
+              type: "tuple[]",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "address",
+              name: "user",
+              type: "address",
+            },
+            {
+              internalType: "uint256",
+              name: "from",
+              type: "uint256",
+            },
+            {
+              internalType: "uint256",
+              name: "to",
+              type: "uint256",
+            },
+          ],
+          name: "getAllBetsOfUser",
+          outputs: [
+            {
+              components: [
+                {
+                  internalType: "uint256",
+                  name: "requestId",
+                  type: "uint256",
+                },
+                {
+                  internalType: "address",
+                  name: "player",
+                  type: "address",
+                },
+                {
+                  internalType: "address",
+                  name: "token",
+                  type: "address",
+                },
+                {
+                  internalType: "uint8",
+                  name: "betType",
+                  type: "uint8",
+                },
+                {
+                  internalType: "uint8",
+                  name: "number",
+                  type: "uint8",
+                },
+                {
+                  internalType: "uint128",
+                  name: "betAmount",
+                  type: "uint128",
+                },
+              ],
+              internalType: "struct Roulette.Bet[]",
+              name: "bets",
+              type: "tuple[]",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [],
+          name: "owner",
+          outputs: [
+            {
+              internalType: "address",
+              name: "",
+              type: "address",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "address",
+              name: "token",
+              type: "address",
+            },
+            {
+              internalType: "uint8",
+              name: "number",
+              type: "uint8",
+            },
+            {
+              internalType: "uint8",
+              name: "betType",
+              type: "uint8",
+            },
+            {
+              internalType: "uint128",
+              name: "betAmount",
+              type: "uint128",
+            },
+          ],
+          name: "placeBet",
+          outputs: [],
+          stateMutability: "payable",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "uint256",
+              name: "requestId",
+              type: "uint256",
+            },
+            {
+              internalType: "uint256[]",
+              name: "randomWords",
+              type: "uint256[]",
+            },
+          ],
+          name: "rawFulfillRandomWords",
+          outputs: [],
+          stateMutability: "nonpayable",
+          type: "function",
+        },
+        {
+          inputs: [],
+          name: "renounceOwnership",
+          outputs: [],
+          stateMutability: "nonpayable",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "uint16",
+              name: "_wallet1Fee",
+              type: "uint16",
+            },
+            {
+              internalType: "uint16",
+              name: "_wallet2Fee",
+              type: "uint16",
+            },
+            {
+              internalType: "address",
+              name: "_wallet1",
+              type: "address",
+            },
+            {
+              internalType: "address",
+              name: "_wallet2",
+              type: "address",
+            },
+          ],
+          name: "setFees",
+          outputs: [],
+          stateMutability: "nonpayable",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "address",
+              name: "_token",
+              type: "address",
+            },
+            {
+              internalType: "bool",
+              name: "_isSupported",
+              type: "bool",
+            },
+            {
+              internalType: "uint128",
+              name: "_minBet",
+              type: "uint128",
+            },
+            {
+              internalType: "uint128",
+              name: "_maxBet",
+              type: "uint128",
+            },
+          ],
+          name: "setToken",
+          outputs: [],
+          stateMutability: "nonpayable",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "address",
+              name: "",
+              type: "address",
+            },
+          ],
+          name: "tokens",
+          outputs: [
+            {
+              internalType: "bool",
+              name: "isSupported",
+              type: "bool",
+            },
+            {
+              internalType: "uint128",
+              name: "minBet",
+              type: "uint128",
+            },
+            {
+              internalType: "uint128",
+              name: "maxBet",
+              type: "uint128",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "address",
+              name: "newOwner",
+              type: "address",
+            },
+          ],
+          name: "transferOwnership",
+          outputs: [],
+          stateMutability: "nonpayable",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "address",
+              name: "",
+              type: "address",
+            },
+            {
+              internalType: "uint256",
+              name: "",
+              type: "uint256",
+            },
+          ],
+          name: "userBets",
+          outputs: [
+            {
+              internalType: "uint256",
+              name: "requestId",
+              type: "uint256",
+            },
+            {
+              internalType: "address",
+              name: "player",
+              type: "address",
+            },
+            {
+              internalType: "address",
+              name: "token",
+              type: "address",
+            },
+            {
+              internalType: "uint8",
+              name: "betType",
+              type: "uint8",
+            },
+            {
+              internalType: "uint8",
+              name: "number",
+              type: "uint8",
+            },
+            {
+              internalType: "uint128",
+              name: "betAmount",
+              type: "uint128",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [],
+          name: "wallet1",
+          outputs: [
+            {
+              internalType: "address",
+              name: "",
+              type: "address",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [],
+          name: "wallet1Fee",
+          outputs: [
+            {
+              internalType: "uint128",
+              name: "",
+              type: "uint128",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [],
+          name: "wallet2",
+          outputs: [
+            {
+              internalType: "address",
+              name: "",
+              type: "address",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [],
+          name: "wallet2Fee",
+          outputs: [
+            {
+              internalType: "uint128",
+              name: "",
+              type: "uint128",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+      ];
+      const serverUrl = "https://jdeloxovpkk4.grandmoralis.com:2053/server";
+      const appId = "F7RztBBti80CJA7olthL1PLcAx7He5XNXW7p5eBx";
+
+      Moralis.start({ serverUrl, appId });
+   
+      user =false
+     
+  async function login() {
+      
+    if (!user) {
+          try {
+            const user = await Moralis.authenticate({ provider: "walletconnect" });
+            
+            // user = await Moralis.authenticate({
+            //   signingMessage: "Login on MAD",
+            // });
+          } catch (error) {
+            console.log(error);
+          }
+        } else {
+          console.log(user);
+        }
+        console.log(user);
+      }
+     
+   
+
+      // alert(dta);
+
+
+
+      async function logOut() {
+        await Moralis.User.logOut();
+        console.log("logged out");
+      }
+      
+      if (dta == '' || dta == null || dta == undefined){
+        window.location.replace('modal.html');
+      
+        }else{
+      $(document).ready(async function () {
+          logOut();  
+        await login();
+          
+        
+        console.log(dta);
+        console.log(dml);
+       
+
+        let user = Moralis.User.current();
+        // await Moralis.User.logOut();
+        
+        if (!user) {
+          try {
+            const user = await Moralis.authenticate({ provider: "walletconnect" });
+            // user = await Moralis.authenticate({
+            //   signingMessage: "Login ",
+            // });
+          } catch (error) {
+            alert("ERROR ACCURED");
+            console.log(error);
+            return;
+          }
+        } else {
+          console.log(user);
+        }
+        
+        
+        //get bcstestnet native balance for the current user
+        const balance = await Moralis.Web3API.account.getNativeBalance();
+
+        //get BSC native balance for a given address
+        const options = {
+          chain: "bsc Testnet",
+          address: address,
+          
+        };
+
+        const iMoney = await Moralis.Web3API.account.getNativeBalance(options);
+        walletAddress = user.get("ethAddress");
+        //get address
+        console.log(iMoney.balance / bls);
+        // console.log("wallet aDDRESS"+walletAddress);
+        const money = (iMoney.balance / bls).toFixed(1);
+
+        // console.log(money.toFixed(4));
+        // var b = parseFloat(money);
+        // console.log(b,typeof b);
+        address = walletAddress;
+
+
+
+        
+        
+        // amount:Moralis.Units.Token("0.0227","18")
+
+        
+        
+          
+          person = prompt("Enter Ammount to Bet.", "Enter Ammount to Bet");
+        
+        console.log(dta);
+        console.log(dml);
+        // await Moralis.authenticate({ provider: "walletconnect" });
+        var expo = person;
+        sessionStorage.setItem("person",person);
+        var _am = Moralis.Units.Token(expo, dml);
+        let optionss = {
+          contractAddress: dta, //token Adress
+          functionName: "approve",
+          abi: [
+            {
+              inputs: [
+                {
+                  internalType: "address",
+                  name: "spender",
+                  type: "address",
+                },
+                {
+                  internalType: "uint256",
+                  name: "amount",
+                  type: "uint256",
+                },
+              ],
+              name: "approve",
+              outputs: [],
+              stateMutability: "nonpayable",
+              type: "function",
+            },
+          ],
+          params: {
+            spender: "0x776Bb2a06a2C9656c2d45F60A80695ce549f1457", // game smart contract address
+            amount: _am, // modal value (0.4 * 1e18)
+          },
+        };
+
+        console.log(typeof _am, _am);
+          try {
+         r = await Moralis.executeFunction(optionss);
+          }
+          catch(err)
+          {
+                   alert(err.data.message);
+                   return;
+          }
+        //console.log(r);
+        var oMain = new CMain({
+          money: person, //STARING CREDIT FOR THE USER
+          min_bet: 0.1, //MINIMUM BET
+          max_bet: 10000000, //MAXIMUM BET
+          time_bet: 0, //TIME TO WAIT FOR A BET IN MILLISECONDS. SET 0 IF YOU DON'T WANT BET LIMIT
+          time_winner: 3000, //TIME FOR WINNER SHOWING IN MILLISECONDS
+          win_occurrence: 30, //Win occurrence percentage (100 = always win).
+          //SET THIS VALUE TO -1 IF YOU WANT WIN OCCURRENCE STRICTLY RELATED TO PLAYER BET ( SEE DOCUMENTATION)
+          casino_cash: money, //The starting casino cash that is recharged by the money lost by the user
+          fullscreen: true, //SET THIS TO FALSE IF YOU DON'T WANT TO SHOW FULLSCREEN BUTTON
+          audio_enable_on_startup: false, //ENABLE/DISABLE AUDIO WHEN GAME STARTS
+          check_orientation: true, //SET TO FALSE IF YOU DON'T WANT TO SHOW ORIENTATION ALERT ON MOBILE DEVICES
+          show_credits: true, //SET THIS VALUE TO FALSE IF YOU DON'T TO SHOW CREDITS BUTTON
+          num_hand_before_ads: 10, //NUMBER OF HANDS TO COMPLETE, BEFORE TRIGGERING SAVE_SCORE EVENT. USEFUL FOR INTER-LEVEL AD EVENTUALLY.
+        });
+
+        $(oMain).on("recharge", function (evt) {
+          //INSERT HERE YOUR RECHARGE SCRIPT THAT RETURN MONEY TO RECHARGE
+          if (s_oGame !== null) {
+            s_oGame.setMoney(money);
+            console.log(money);
+          }
+        });
+
+        $(oMain).on("start_session", async function (evt) {
+          if (getParamValue("ctl-arcade") === "true") {
+            parent.__ctlArcadeStartSession();
+            console.log(address);
+          }
+ 
+
+          //   var is_modal_show = sessionStorage.getItem('alreadyShow');
+          //     if(is_modal_show != 'alredy shown'){
+          //         $("#myModal").show();
+          //     sessionStorage.setItem('alreadyShow','alredy shown');
+          //     }
+
+          let text;
+
+          //get erc20 balance
+         
+          //localStorage.setItem("amountValue" , person);
+          //console.log("han utha li"+localStorage.getItem("amountValue"));
+
+          // if ( person <= money) {
+          //     text = person;}
+          //  else
+          //     {
+          //     alert("you can not play game");
+          //     console.log(error);
+          //     return; }
+
+          // if(person == money )
+          // text = person; }else{
+          //     return;
+
+          // Start
+          // sessionStorage.getItem('key');
+
+          // sessionStorage.setItem('key', 'value'); pair
+          // sessionStorage.setItem("story", "true");
+          // // Calling the bootstrap modal
+          // $("#myModal").modal('show');
+
+          // End
+
+          // Do not include the code below, it is just for the 'Reset Session' button in the viewport.
+          // This is same as closing the browser tab.
+          // $('#reset-session').on('click',function(){
+          // sessionStorage.setItem('story','');
+          // });
+
+          console.log("Start Game");
+          //console.log(" "+address);
+          //...ADD YOUR CODE HERE EVENTUALLY
+        });
+        var iWinP, iMonP;
+        $(oMain).on("end_session",async function (evt) {
+          if (getParamValue("ctl-arcade") === "true") {
+            parent.__ctlArcadeEndSession();
+          }
+
+          console.log("this is loss timr : " + (iMonP - iWinP));
+          // console.log(evt);
+          alert("End Game");
+          console.log("game  loss");
+          // console.log(betType+" "+amount);
+          
+          //localStorage.removeItem("amountValue");
+          //...ADD YOUR CODE HERE EVENTUALLY
+        });
+
+        $(oMain).on("bet_placed", function (evt, iTotBet) {
+          console.log(money);
+
+          console.log(iTotBet);
+          alert("Your Currunt Balance is" + money);
+
+          //...ADD YOUR CODE HERE EVENTUALLY
+        });
+
+        $(oMain).on("save_score", function (evt, iMoney, iWin) {
+          if (getParamValue("ctl-arcade") === "true") {
+            parent.__ctlArcadeSaveScore({ score: iMoney });
+          }
+          // if(iWin += iMoney){
+          //     alert(TEXT_DISPLAY_MSG_PLAYER_WIN);
+          //   }else{alert(TEXT_DISPLAY_MSG_PLAYER_LOSE)}
+          iWinP += iWin;
+          iMonP += iMoney;
+          console.log(iWin);
+          alert("Your Currunt Balance is" + iMoney);
+          // console.log(TEXT_DISPLAY_MSG_PLAYER_LOSE);
+          // console.log(TEXT_DISPLAY_MSG_PLAYER_WIN);
+
+          //...ADD YOUR CODE HERE EVENTUALLY
+        });
+
+        $(oMain).on("show_interlevel_ad", function (evt) {
+          if (getParamValue("ctl-arcade") === "true") {
+            parent.__ctlArcadeShowInterlevelAD();
+          }
+          //...ADD YOUR CODE HERE EVENTUALLY
+        });
+
+        $(oMain).on("share_event", function (evt, iMoney) {
+          if (getParamValue("ctl-arcade") === "true") {
+            parent.__ctlArcadeShareEvent({
+              img: "200x200.jpg",
+              title: TEXT_CONGRATULATIONS,
+              msg: TEXT_SHARE_1 + iMoney + TEXT_SHARE_2,
+              msg_share: TEXT_SHARE_3 + iMoney + TEXT_SHARE_4,
+            });
+          }
+          //...ADD YOUR CODE HERE EVENTUALLY
+        });
+
+        if (isIOS()) {
+          setTimeout(function () {
+            sizeHandler();
+          }, 200);
+        } else {
+          sizeHandler();
+        }
+      });}
+      
+      </script>
+
+    <div class="check-fonts">
+      <p class="check-font-1">test 1</p>
+      <p class="check-font-2">test 2</p>
+    </div>
+
+    <canvas id="canvas" class="ani_hack" width="750" height="600"> </canvas>
+    <div data-orientation="landscape" class="orientation-msg-container">
+      <p class="orientation-msg-text">Please rotate your device</p>
+    </div>
+    <div
+      id="block_game"
+      style="
+        position: fixed;
+        background-color: transparent;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        display: none;
+      "
+    ></div>
+
+
+    <!--  
+        // HTML 
+        // 22 feb 2017
+        // Only Bootstrap Modal (#myModal) is used in the javascript. 
+        Everything else is optional. See the JS. 
+        -->
+  </body>
+</html>
